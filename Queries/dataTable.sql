@@ -46,3 +46,33 @@ where JOBTITLE='Tester';
 
 
  delete from ScrumTeam where Emp_ID=5;
+
+
+/*
+ adding new column
+ */
+
+
+ ALTER  table ScrumTeam add salary integer;
+
+--update existing employees salary
+
+update ScrumTeam set salary=100000 where Emp_ID=1;
+update ScrumTeam set salary=120000 where Emp_ID=2;
+update ScrumTeam set salary=90000 where Emp_ID=3;
+update ScrumTeam set salary=110000 where Emp_ID=4;
+
+--rename the column
+
+alter table ScrumTeam rename column  salary to annual_salary;
+
+--delete or drop the column
+
+alter table ScrumTeam drop  column ANNUAL_SALARY;
+
+--how to change table name
+alter table ScrumTeam rename to agileteam;
+
+select * from agileteam;
+
+
